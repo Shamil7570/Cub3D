@@ -6,7 +6,7 @@
 /*   By: medeana <medeana@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 14:03:27 by medeana           #+#    #+#             */
-/*   Updated: 2022/05/03 20:54:38 by medeana          ###   ########.fr       */
+/*   Updated: 2022/05/04 18:18:57 by medeana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ int	ft_key_press(t_cub *cub)
 {
 	if (cub->forward == 1)
 	{
-		if (cub->map[(int)(cub->pos_x + cub->dir_vector_x / 3)]
-			[(int)(cub->pos_y + cub->dir_vector_y / 3)] == '0')
+		if (cub->map[(int)(cub->pos_x + cub->dir_vector_x * cub->move_speed)]
+			[(int)(cub->pos_y + cub->dir_vector_y * cub->move_speed)] == '0')
 			if_forward(cub);
 	}
 	if (cub->back == 1)
 	{
-		if (cub->map[(int)(cub->pos_x - cub->dir_vector_x / 4)]
-			[(int)(cub->pos_y - cub->dir_vector_y / 4)] == '0')
+		if (cub->map[(int)(cub->pos_x - cub->dir_vector_x * cub->move_speed)]
+			[(int)(cub->pos_y - cub->dir_vector_y * cub->move_speed)] == '0')
 			if_back(cub);
 	}
 	if (cub->left2 == 1)

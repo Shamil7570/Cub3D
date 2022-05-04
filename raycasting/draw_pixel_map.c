@@ -6,7 +6,7 @@
 /*   By: medeana <medeana@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 14:39:55 by medeana           #+#    #+#             */
-/*   Updated: 2022/05/03 21:02:05 by medeana          ###   ########.fr       */
+/*   Updated: 2022/05/04 16:45:12 by medeana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int	ft_hex(int r, int g, int b)
 
 void	wrapper_init_pos(t_cub *cub, int *y, int *x)
 {
-	cub->pos_x = *y;
-	cub->pos_y = *x;
+	cub->pos_x = *y + 0.5;
+	cub->pos_y = *x + 0.5;
 	if (cub->map[*y][*x] == 'N')
 		cub->dir_vector_x = -1;
 	if (cub->map[*y][*x] == 'S')

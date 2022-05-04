@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   texture.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: modysseu <modysseu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: medeana <medeana@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 14:00:52 by medeana           #+#    #+#             */
-/*   Updated: 2022/04/14 17:14:58 by modysseu         ###   ########.fr       */
+/*   Updated: 2022/05/04 15:17:54 by medeana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	load_texture(t_cub *cub)
 {
 	t_img	img;
 
-	load_img(cub, cub->texture[0], cub->textur.east, &img);
-	load_img(cub, cub->texture[1], cub->textur.north, &img);
-	load_img(cub, cub->texture[2], cub->textur.south, &img);
-	load_img(cub, cub->texture[3], cub->textur.west, &img);
+	load_img(cub, cub->texture[0], cub->textur.north, &img);
+	load_img(cub, cub->texture[1], cub->textur.south, &img);
+	load_img(cub, cub->texture[2], cub->textur.west, &img);
+	load_img(cub, cub->texture[3], cub->textur.east, &img);
 }
 
 void	load_img(t_cub *cub, int *texture, char *path, t_img *img)
